@@ -1,60 +1,597 @@
-<!DOCTYPE>
-<html>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Stay&Play Homepage</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Malay Chakma" />
+    <title>Stay&Play Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-land-plot-icon lucide-land-plot">
-                    <path d="m12 8 6-3-6-3v10" />
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo" aria-label="Stay and Play Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path
-                        d="m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12" />
-                    <path d="m6.49 12.85 11.02 6.3" />
-                    <path d="M17.51 12.85 6.5 19.15" />
-                </svg>Stay&Play</a>
-            <div class="menu-bar">
-                <a href="#">HOME</a>
-                <a href="#">WHERE TO STAY</a>
-                <a href="#">WHERE TO PLAY</a>
-                <a href="#">GROUP TRAVEL</a>
-                <a href="#">BOOK A TEA TIME</a>
+                        d="M15 22a1 1 0 0 1-1-1v-4a1 1 0 0 1 .445-.832l3-2a1 1 0 0 1 1.11 0l3 2A1 1 0 0 1 22 17v4a1 1 0 0 1-1 1z" />
+                    <path d="M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2" />
+                    <path d="M18 22v-3" />
+                    <circle cx="10" cy="10" r="3" />
+                </svg>
+                Stay&Play
+            </a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li><a href="#" class="nav__link">HOME</a></li>
+                    <li><a href="#" class="nav__link">WHERE TO STAY</a></li>
+                    <li><a href="#" class="nav__link">WHERE TO PLAY</a></li>
+                    <li><a href="#" class="nav__link">GROUP TRAVEL</a></li>
+                    <li><a href="#" class="nav__link">BOOK A TEA TIME</a></li>
+                </ul>
 
-                <from class="search">
-                    <input type="search" placeholder="SEARCH">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                    </svg>
-                </from>
+                <form class="nav__search" role="search">
+                    <input type="search" placeholder="SEARCH" aria-label="Search site content">
+                    <button type="submit" aria-label="Submit search" class="nav__search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </button>
+                </form>
             </div>
         </nav>
     </header>
 
-    <main>
-        <h1>Eagle Creak Golf Club, Stay and Play</h1>
+    <main class="main-content">
+        <article class="course-detail">
+            <header class="course-detail__header">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Golf course</a></li>
+                        <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Florida</a></li>
+                        <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Orlando</a></li>
+                        <li class="breadcrumb__item"><span class="breadcrumb_current" aria-current="page">Eagle Creek
+                                Golf Club</span></li>
+                    </ol>
+                </nav>
+                <h1 class="course-detail__title">Eagle Creek Golf Club, Stay and Play</h1>
+                <div class="place-meta">
+                    <div class="rating" aria-label="4.5 out of 5 stars">
+                        <span aria-hidden="true">★★★★★</span>
+                        <span>4.5</span>
+                        <span>(128 reviews)</span>
+                    </div>
+                    <span class="place-meta__divider">|</span>
+                    <div class="opening-hours">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        <span>TEE TIMES DAILY
+                            <time datetime="08:00">8:00 AM</time> - <time datetime="20:00">8:00 PM</time>
+                        </span>
+                    </div>
+                </div>
+            </header>
 
-        <section class="place-name">
-            <section>
+            <div class="course-detail__grid">
+                <div class="course-detail__primary">
+                    <section class="place-gallery">
+                        <div class="place-gallery__main">
+                            <img src="assets/Eagle creak - 1.webp" alt="Eagle Creek Golf Course Main View">
+                        </div>
+                        <div class="place-gallery__thumbs">
+                            <img src="assets/Eagle creak - 2.webp" alt="Eagle Creek Golf Course Fairway">
+                            <div class="thumb-wrapper">
+                                <img src="assets/Eagle creak - 3.webp" alt="Eagle Creek Golf Course Hole View">
+                                <button type="button" class="btn-overlay">VIEW ALL 20 IMAGES</button>
+                            </div>
+                        </div>
+                    </section>
 
-            </section>
-            <aside>
-                Payment Info
-            </aside>
-        </section>
+                    <section class="place-info">
+                        <p class="place-info__description">
+                            Eagle Creek Golf Club combines scenic views with a championship-level course that offers a
+                            memorable golfing experience. Nestled amidst lush landscapes and serene water features, this
+                            course is known for its challenging design and exceptional playing conditions, making it a
+                            must-play destination for golf enthusiasts.
+                        </p>
+                        <div class="place-summary">
+                            <h2 class="place-summary__title">EAGLE CREEK GOLF CLUB AT A GLANCE</h2>
+                            <ul class="place-summary__list">
+                                <li class="place-summary__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#1f1f1f">
+                                        <path
+                                            d="M780-120q-25 0-42.5-17.5T720-180q0-25 17.5-42.5T780-240q25 0 42.5 17.5T840-180q0 25-17.5 42.5T780-120ZM400-80q-100 0-170-23.5T160-160q0-23 33-41t87-29v70h80v-720l320 156-240 124v362q86 5 143 26.5t57 51.5q0 33-70 56.5T400-80Z" />
+                                    </svg>
+                                    PAR: 72
+                                </li>
+                                <li class="place-summary__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#1f1f1f">
+                                        <path
+                                            d="M200-160v-340q0-142 99-241t241-99q142 0 241 99t99 241q0 142-99 241t-241 99H200Zm80-80h260q108 0 184-76t76-184q0-108-76-184t-184-76q-108 0-184 76t-76 184v260Zm359-161q41-41 41-99t-41-99q-41-41-99-41t-99 41q-41 41-41 99t41 99q41 41 99 41t99-41ZM480-500q0-25 17.5-42.5T540-560q25 0 42.5 17.5T600-500q0 25-17.5 42.5T540-440q-25 0-42.5-17.5T480-500ZM80-160v-200h80v200H80Z" />
+                                    </svg>
+                                    TOTAL YARDS: 7305
+                                </li>
+                                <li class="place-summary__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#1f1f1f">
+                                        <path
+                                            d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z" />
+                                    </svg>
+                                    PUBLIC COURSE
+                                </li>
+                            </ul>
+
+                            <button type="button" class="btn btn--outline">MORE COURSE HIGHLIGHTS</button>
+                        </div>
+                    </section>
+
+                    <section class="stays-section">
+                        <h2 class="stays-section__title">Find the Perfect Stay Near Eagle Creek Golf Club in Orlando, FL
+                        </h2>
+
+                        <div class="stays-filters">
+                            <button class="stays-filter-btn">STAY WITHIN 10 MILES <span class="arrow">›</span></button>
+                            <button class="stays-filter-btn">PROPERTY TYPE <span class="arrow">›</span></button>
+                            <button class="stays-filter-btn">2 BEDROOM <span class="arrow">›</span></button>
+                            <button class="stays-filter-btn">MOST POPULAR <span class="arrow">›</span></button>
+                        </div>
+
+                        <div class="stays-layout">
+                            <div class="stays-content">
+                                <div class="property-grid">
+                                    <!-- Property Card 1 -->
+                                    <article class="property-card">
+                                        <div class="property-card__image-container">
+                                            <img src="assets/fairway greens resort.jpg" alt="Fairway Greens Resort"
+                                                class="property-card__image">
+                                            <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
+                                            <div class="property-card__actions">
+                                                <button class="action-btn" aria-label="Share">✈</button>
+                                                <button class="action-btn" aria-label="Location">📍</button>
+                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                            </div>
+                                        </div>
+                                        <div class="property-card__body">
+                                            <div class="property-card__rating">
+                                                <span class="rating-badge">10.0</span>
+                                                <span class="rating-text">Exceptional</span>
+                                                <span class="review-count">12 Reviews</span>
+                                            </div>
+                                            <h3 class="property-card__title">Fairway Greens Resort</h3>
+                                            <div class="property-card__price">
+                                                <span class="booking-source">Booking.com</span>
+                                                <div class="price-val">From <strong>$295</strong> <span
+                                                        class="info-icon">ⓘ</span></div>
+                                            </div>
+                                            <p class="property-card__amenities">
+                                                Shuttle Service To The Course - Golf Club Storage - Pet-Friendly -
+                                                On-Site Dining Options - Sleeps 8
+                                            </p>
+                                            <div class="property-card__location">Florida › Orlando</div>
+                                            <div class="property-card__buttons">
+                                                <button class="btn btn--outline">LEARN MORE</button>
+                                                <button class="btn btn--primary">SEE DATES</button>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <!-- Property Card 2 -->
+                                    <article class="property-card">
+                                        <div class="property-card__image-container">
+                                            <img src="assets/The par view lodge.jpeg" alt="The Par View Lodge"
+                                                class="property-card__image">
+                                            <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
+                                            <div class="property-card__actions">
+                                                <button class="action-btn" aria-label="Share">✈</button>
+                                                <button class="action-btn" aria-label="Location">📍</button>
+                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                            </div>
+                                        </div>
+                                        <div class="property-card__body">
+                                            <div class="property-card__rating">
+                                                <span class="rating-badge">10.0</span>
+                                                <span class="rating-text">Exceptional</span>
+                                                <span class="review-count">12 Reviews</span>
+                                            </div>
+                                            <h3 class="property-card__title">The Par View Lodge</h3>
+                                            <div class="property-card__price">
+                                                <span class="booking-source">Booking.com</span>
+                                                <div class="price-val">From <strong>$295</strong> <span
+                                                        class="info-icon">ⓘ</span></div>
+                                            </div>
+                                            <p class="property-card__amenities">
+                                                Shuttle Service To The Course - Golf Club Storage - Pet-Friendly -
+                                                On-Site Dining Options - Sleeps 8
+                                            </p>
+                                            <div class="property-card__location">Florida › Orlando</div>
+                                            <div class="property-card__buttons">
+                                                <button class="btn btn--outline">LEARN MORE</button>
+                                                <button class="btn btn--primary">SEE DATES</button>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <!-- Property Card 3 -->
+                                    <article class="property-card">
+                                        <div class="property-card__image-container">
+                                            <img src="assets/Coastal links retreat.jpg" alt="Coastal Links Retreat"
+                                                class="property-card__image">
+                                            <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
+                                            <div class="property-card__actions">
+                                                <button class="action-btn" aria-label="Share">✈</button>
+                                                <button class="action-btn" aria-label="Location">📍</button>
+                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                            </div>
+                                        </div>
+                                        <div class="property-card__body">
+                                            <div class="property-card__rating">
+                                                <span class="rating-badge">10.0</span>
+                                                <span class="rating-text">Exceptional</span>
+                                                <span class="review-count">12 Reviews</span>
+                                            </div>
+                                            <h3 class="property-card__title">Coastal Links Retreat</h3>
+                                            <div class="property-card__price">
+                                                <span class="booking-source">Booking.com</span>
+                                                <div class="price-val">From <strong>$295</strong> <span
+                                                        class="info-icon">ⓘ</span></div>
+                                            </div>
+                                            <p class="property-card__amenities">
+                                                Shuttle Service To The Course - Golf Club Storage - Pet-Friendly -
+                                                On-Site Dining Options - Sleeps 8
+                                            </p>
+                                            <div class="property-card__location">Florida › Orlando</div>
+                                            <div class="property-card__buttons">
+                                                <button class="btn btn--outline">LEARN MORE</button>
+                                                <button class="btn btn--primary">SEE DATES</button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="stays-footer">
+                                    <div class="pagination">
+                                        <span class="pagination__link pagination__link--disabled">PREVIOUS</span>
+                                        <span class="pagination__link pagination__link--active">01</span>
+                                        <a href="#" class="pagination__link">02</a>
+                                        <a href="#" class="pagination__link">03</a>
+                                        <a href="#" class="pagination__link">04</a>
+                                        <a href="#" class="pagination__link">05</a>
+                                        <span class="pagination__dots">...</span>
+                                        <a href="#" class="pagination__link">NEXT</a>
+                                    </div>
+                                    <button class="view-all-btn">VIEW ALL PLACES TO STAY</button>
+                                </div>
+                            </div>
+
+                            <div class="map-container">
+                                <div class="map-controls">
+                                    <button class="map-btn">+</button>
+                                    <button class="map-btn">−</button>
+                                </div>
+                                <div class="map-layer-controls">
+                                    <button class="map-type-btn active">Map</button>
+                                    <button class="map-type-btn">Satellite</button>
+                                </div>
+                                <div class="map-pin price-pin" style="top: 25%; left: 75%;">$200</div>
+                                <div class="map-pin price-pin" style="top: 30%; left: 60%;">$100</div>
+                                <div class="map-pin price-pin" style="top: 35%; left: 65%;">$200</div>
+                                <div class="map-pin price-pin price-pin--selected" style="top: 52%; left: 85%;">$200
+                                </div>
+                                <div class="map-pin red-marker" style="top: 50%; left: 80%;">📍</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="highlights-section">
+                        <div class="highlights-container">
+                            <h2 class="highlights-title">Eagle Creek Golf Club Highlights</h2>
+
+                            <div class="highlights-grid">
+                                <article class="highlight-card">
+                                    <div class="highlight-card__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 18v-7" />
+                                            <path d="M12 11l7-4-7-3v7z" />
+                                            <circle cx="12" cy="18" r="3" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="highlight-card__title">Par and Difficulty</h3>
+                                    <p class="highlight-card__text highlight-card__text--bold">Par 72 (Front 9: Par 36,
+                                        Back 9: Par 36)</p>
+                                    <p class="highlight-card__text">Course Rating: 71.4</p>
+                                    <p class="highlight-card__text">Course Slope: 113</p>
+                                    <p class="highlight-card__desc">Challenging for experts, enjoyable for
+                                        intermediates, and welcoming for beginners.</p>
+                                </article>
+
+                                <article class="highlight-card">
+                                    <div class="highlight-card__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M2 12h20" />
+                                            <path d="M6 12v-3" />
+                                            <path d="M10 12v-2" />
+                                            <path d="M14 12v-3" />
+                                            <path d="M18 12v-2" />
+                                            <rect x="2" y="6" width="20" height="12" rx="2" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="highlight-card__title">Yardage</h3>
+                                    <p class="highlight-card__text highlight-card__text--bold">7,198 yards from the
+                                        championship tees</p>
+                                    <div class="highlight-card__section">
+                                        <h4 class="highlight-card__subtitle">Tee Box Options</h4>
+                                        <p class="highlight-card__text">Championship: 7,198 yards</p>
+                                        <p class="highlight-card__text">Regular: 6,720 yards</p>
+                                        <p class="highlight-card__text">Forward: 5,942 yards</p>
+                                        <p class="highlight-card__text">Beginner: 5,152 yards</p>
+                                    </div>
+                                </article>
+
+                                <article class="highlight-card">
+                                    <div class="highlight-card__subgroup">
+                                        <div class="highlight-card__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                                <path
+                                                    d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4.1a1 1 0 0 0-1.4 0l-2.1 2.1a1 1 0 0 0 0 1.3z" />
+                                                <path d="m11 12 3.5 3.5" />
+                                                <circle cx="7.5" cy="16.5" r="3.5" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="highlight-card__title">Public Course</h3>
+                                        <p class="highlight-card__text">No stay required</p>
+                                    </div>
+                                    <div class="highlight-card__divider"></div>
+                                    <div class="highlight-card__subgroup">
+                                        <div class="highlight-card__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                                <path
+                                                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2" />
+                                                <circle cx="7" cy="17" r="2" />
+                                                <circle cx="17" cy="17" r="2" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="highlight-card__title">Cart Recommended</h3>
+                                        <p class="highlight-card__text">Walking allowed</p>
+                                    </div>
+                                </article>
+
+                                <article class="highlight-card">
+                                    <div class="highlight-card__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M10 10v.01" />
+                                            <path d="M14 10v.01" />
+                                            <path d="M18 10v.01" />
+                                            <path d="M8.5 2h7l4 8H4.5z" />
+                                            <path d="M4.5 10c0 4.4 3.4 8 7.5 8s7.5-3.6 7.5-8" />
+                                            <path d="M12 18v4" />
+                                            <path d="M8 22h8" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="highlight-card__title">Course Style</h3>
+                                    <p class="highlight-card__text">Parkland</p>
+                                    <div class="highlight-card__divider"></div>
+                                    <div class="highlight-card__section">
+                                        <h4 class="highlight-card__subtitle">Notable Features</h4>
+                                        <p class="highlight-card__desc">Tree-lined fairways, undulating greens, and
+                                            strategically placed bunkers. Water hazards come into play on several holes.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="amenities-grid">
+                                <div class="amenity-item">
+                                    <div class="amenity-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="6" cy="12" r="2" />
+                                            <path d="M6 10V3" />
+                                            <path d="M18 14h-8a2 2 0 0 0-2 2v5" />
+                                            <path d="M18 14l-3-3" />
+                                            <path d="M18 14l-3 3" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="amenity-item__title">18-Hole Championship Course</h4>
+                                        <p class="amenity-item__text">Designed for all skill levels with challenging
+                                            layouts.</p>
+                                    </div>
+                                </div>
+
+                                <div class="amenity-item">
+                                    <div class="amenity-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="9" />
+                                            <path d="M12 7v5l3 2" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="amenity-item__title">Tee Time Flexibility</h4>
+                                        <p class="amenity-item__text">Convenient booking options to suit your schedule.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="amenity-item">
+                                    <div class="amenity-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="amenity-item__title">Architect and History</h4>
+                                        <p class="amenity-item__text">Designed by renowned architect Ron Garl, the
+                                            course has hosted regional tournaments.</p>
+                                    </div>
+                                </div>
+
+                                <div class="amenity-item">
+                                    <div class="amenity-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                                            <path d="M3 9h18" />
+                                            <path d="M9 21V9" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="amenity-item__title">Luxury Clubhouse</h4>
+                                        <p class="amenity-item__text">Relax with premium dining, locker rooms, and event
+                                            spaces.</p>
+                                    </div>
+                                </div>
+
+                                <div class="amenity-item">
+                                    <div class="amenity-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M2 3h20" />
+                                            <path d="M6 3v18" />
+                                            <path d="M18 3v18" />
+                                            <path d="M6 12h12" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="amenity-item__title">Golf Lessons Available</h4>
+                                        <p class="amenity-item__text">Expert instruction for players of all levels.</p>
+                                    </div>
+                                </div>
+
+                                <div class="amenity-item">
+                                    <div class="amenity-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                                            <path d="M3 6h18" />
+                                            <path d="M16 10a4 4 0 0 1-8 0" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="amenity-item__title">Pro Shop</h4>
+                                        <p class="amenity-item__text">Fully stocked with top-tier gear, apparel, and
+                                            accessories.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="special-packages">
+                            <strong class="special-packages__label">SPECIAL PACKAGES</strong>
+                            <span class="special-packages__text">Stay & Play packages include two rounds of golf, a
+                                cart, and accommodations at a nearby resort starting at $250 per person.</span>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="availability-wrapper">
+                    <aside class="availability-card" aria-labelledby="availability-card-title">
+                        <div class="availability-card__header">
+                            <h2 id="availability-card-title" class="availability-card__price">
+                                USD $600 <span class="availability-card__price-sub">AVG PER NIGHT</span>
+                            </h2>
+                        </div>
+
+                        <form class="availability-card__form" action="#" method="GET">
+                            <div class="availability-card__dates-grid">
+                                <div class="availability-card__select-box">
+                                    <label for="check-in" class="availability-card__label">CHECK-IN</label>
+                                    <select id="check-in" class="availability-card__select">
+                                        <option value="2025-09-19">19 SEP 2025</option>
+                                    </select>
+                                </div>
+
+                                <div class="availability-card__select-box">
+                                    <label for="check-out" class="availability-card__label">CHECK-OUT</label>
+                                    <select id="check-out" class="availability-card__select">
+                                        <option value="2025-09-21">21 SEP 2025</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="availability-card__select-box">
+                                <label for="guests" class="availability-card__label">GUESTS</label>
+                                <select id="guests" class="availability-card__select">
+                                    <option value="3-1-1">3 GUESTS, 1 INFANT, 1 PET</option>
+                                </select>
+                            </div>
+
+                            <div class="availability-card__status">
+                                <span class="availability-card__status-icon" aria-hidden="true">✓</span>
+                                <span class="availability-card__status-text">Dates selected are available</span>
+                            </div>
+
+                            <div class="availability-card__breakdown">
+                                <div class="availability-card__row">
+                                    <span class="availability-card__row-label">PRICE PER NIGHT</span>
+                                    <span class="availability-card__row-value">USD $600</span>
+                                </div>
+                                <div class="availability-card__row availability-card__row--total">
+                                    <span class="availability-card__total-label">TOTAL PRICE</span>
+                                    <span class="availability-card__total-value">USD $600</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="availability-card__btn">CHECK AVAILABILITY</button>
+
+                            <p class="availability-card__redirect">
+                                You will be redirected to <span class="availability-card__brand">Booking<span
+                                        class="availability-card__brand-dot">.com</span></span>
+                            </p>
+
+                            <div class="availability-card__footer">
+                                <span class="availability-card__fire-icon" aria-hidden="true">🔥</span>
+                                <span>Hot Deal - it has been viewed 30 times today</span>
+                            </div>
+                        </form>
+                    </aside>
+
+                    <div class="availability-card__recommendation">
+                        Not the right fit? Check out our other Top Rated<br>
+                        Bach Rentals in <a href="#" class="availability-card__recommendation-link">Orlando</a>
+                    </div>
+                </div>
+            </div>
+        </article>
     </main>
-    <footer>
-        <div>© 2026 My Website</div>
-    </footer>
 
+    <footer class="footer">
+        <div>© 2026 Stay&Play. All rights reserved.</div>
+    </footer>
 </body>
 
 </html>
