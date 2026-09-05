@@ -44,6 +44,10 @@ ul {
 .header {
     background-color: var(--color-primary);
     color: #ffffff;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 15;
 }
 
 .nav {
@@ -555,6 +559,16 @@ ul {
     overflow: hidden;
 }
 
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 .map-controls {
     position: absolute;
     top: 12px;
@@ -596,6 +610,12 @@ ul {
 .map-type-btn.active {
     background: #f3f4f6;
     font-weight: bold;
+}
+
+.map-pin {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .price-pin {
@@ -724,6 +744,191 @@ ul {
 }
 
 .special-packages__text {
+    color: var(--color-text-muted);
+}
+
+/* Guests Reviews */
+
+.reviews-section {
+    margin-top: 32px;
+}
+
+.reviews-title {
+    margin: 0;
+}
+
+.reviews-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #e8f3ea;
+    border-radius: var(--radius-sm);
+    gap: 8px;
+    font-size: small;
+}
+
+.review--card__date_rating {
+    color: var(--color-text-muted);
+    align-items: center;
+    gap: 16px;
+}
+
+.review-card__rating {
+    color: yellow;
+    font-size: 25px;
+}
+
+.review-card__text {
+    font-weight: 600;
+}
+
+.review-card__user {
+    display: flex;
+    gap: 8px;
+    color: var(--color-text-muted);
+}
+
+/* Place Features */
+.place-feature-section {
+    margin-top: 32px;
+}
+
+.place-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.place-feature-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    gap: 16px;
+    background-color: var(--color-bg-light);
+}
+
+.place-feature-card hr {
+    color: var(--color-bg-light);
+    margin: 12px 0;
+}
+
+.place-feature-card ul {
+    padding-left: 20px;
+    /* Restores spacing for list markers */
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.place-feature-card li {
+    list-style: disc;
+    color: var(--color-text-muted);
+    font-size: small;
+}
+
+.place-feature-card h3,
+h4 {
+    font-weight: 500;
+}
+
+
+/* Best time to play section */
+.best-time-to-play-section {
+    margin-top: 32px;
+}
+
+.best-time-to-play__description {
+    margin: 0.5rem 0;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+
+}
+
+.best-time-to-play-weather_patterns {
+    margin-top: 32px;
+}
+
+.best-time-to-play-weather__header {
+    background: linear-gradient(to right, #3d6471 0%, #438f80 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    color: white;
+    height: 92px;
+    gap: 32px;
+}
+
+.best-time-to-play__vertical_bar {
+    width: 1px;
+    height: 50px;
+    background: #438f80;
+}
+
+.best-time-to-play__days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.best-time-to-play__day {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-time-to-play__day img {
+    width: 50px;
+    height: 50px;
+
+    /* Turn black/dark SVG icons into white */
+    filter: brightness(0) invert(1);
+    display: block;
+    margin: auto;
+}
+
+.best-time-to-play__day span {
+    text-align: center;
+    font-size: x-small;
+}
+
+.best-time-to-play-weather__infos {
+    padding: 1rem;
+    border: 2px solid var(--color-border);
+    border-top: 0;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.best-time-to-play-weather__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.best-time-to-play-weather__grid_card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.best-time-to-play-weather__grid_card hr {
+    color: var(--color-bg-light);
+}
+
+.best-time-to-play-weather__grid_card img {
+    width: 50px;
+    height: 50px;
+}
+
+.best-time-to-play__season p {
+    font-size: 12px;
     color: var(--color-text-muted);
 }
 
@@ -886,12 +1091,182 @@ ul {
     font-weight: 700;
 }
 
-.footer {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    text-align: center;
-    padding: 2rem;
+/* Append to style.css */
+
+.site-footer {
+    background-color: #1a271c;
+    background-image: linear-gradient(rgba(22, 35, 24, 0.88), rgba(22, 35, 24, 0.94)), url('assets/Eagle creak - 1.webp');
+    background-size: cover;
+    background-position: center;
+    color: #b3cbb6;
+    padding: 3.5rem 1.5rem 2.5rem;
+    font-size: 0.75rem;
     margin-top: 3rem;
+}
+
+.site-footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-footer__content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.site-footer__nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.site-footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.site-footer__link {
+    color: #b3cbb6;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s ease;
+}
+
+.site-footer__link:hover {
+    color: #93D99A;
+}
+
+.site-footer__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.25rem;
+}
+
+.site-footer__socials {
+    display: flex;
+    gap: 1.25rem;
+    color: #b3cbb6;
+}
+
+.site-footer__social-link {
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.site-footer__social-link:hover {
+    color: #93D99A;
+}
+
+.site-footer__controls {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.site-footer__select-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.site-footer__select {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(179, 203, 182, 0.4);
+    border-radius: 4px;
+    color: #b3cbb6;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b3cbb6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1rem;
+    padding-right: 1.75rem;
+}
+
+.site-footer__select:focus {
+    border-color: #93D99A;
+}
+
+.site-footer__brand-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.site-footer__brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #b3cbb6;
+}
+
+.site-footer__brand-title {
+    font-size: 1.125rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.site-footer__brand-divider {
+    width: 1px;
+    height: 24px;
+    background-color: rgba(179, 203, 182, 0.3);
+}
+
+.site-footer__brand-sub {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.site-footer__brand-sub span {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.site-footer__brand-sub small {
+    font-size: 0.6rem;
+    color: rgba(179, 203, 182, 0.7);
+}
+
+.site-footer__copyright {
+    font-size: 0.65rem;
+    color: rgba(179, 203, 182, 0.6);
+    margin-top: 0.5rem;
+}
+
+/* Responsive Footer Layout */
+@media (max-width: 900px) {
+    .site-footer__content {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer__aside {
+        align-items: flex-start;
+    }
+
+    .site-footer__controls {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer__nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Responsive Media Queries */
