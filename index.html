@@ -9,7 +9,8 @@
     <title>Stay&Play Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,14 +19,7 @@
     <header class="header">
         <nav class="nav">
             <a href="#" class="nav__logo" aria-label="Stay and Play Home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                        d="M15 22a1 1 0 0 1-1-1v-4a1 1 0 0 1 .445-.832l3-2a1 1 0 0 1 1.11 0l3 2A1 1 0 0 1 22 17v4a1 1 0 0 1-1 1z" />
-                    <path d="M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2" />
-                    <path d="M18 22v-3" />
-                    <circle cx="10" cy="10" r="3" />
-                </svg>
+                <img src="assets/logo.png" alt="Logo of Stay and Play">
                 Stay&Play
             </a>
             <div class="nav__menu">
@@ -66,9 +60,9 @@
                 <h1 class="course-detail__title">Eagle Creek Golf Club, Stay and Play</h1>
                 <div class="place-meta">
                     <div class="rating" aria-label="4.5 out of 5 stars">
-                        <span aria-hidden="true">★★★★★</span>
-                        <span>4.5</span>
-                        <span>(128 reviews)</span>
+                        <span class="rating__stars" aria-hidden="true">★★★★★</span>
+                        <span class="rating__score">4.5</span>
+                        <span class="rating__count">(128 reviews)</span>
                     </div>
                     <span class="place-meta__divider">|</span>
                     <div class="opening-hours">
@@ -110,27 +104,15 @@
                             <h2 class="place-summary__title">EAGLE CREEK GOLF CLUB AT A GLANCE</h2>
                             <ul class="place-summary__list">
                                 <li class="place-summary__item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px" fill="#1f1f1f">
-                                        <path
-                                            d="M780-120q-25 0-42.5-17.5T720-180q0-25 17.5-42.5T780-240q25 0 42.5 17.5T840-180q0 25-17.5 42.5T780-120ZM400-80q-100 0-170-23.5T160-160q0-23 33-41t87-29v70h80v-720l320 156-240 124v362q86 5 143 26.5t57 51.5q0 33-70 56.5T400-80Z" />
-                                    </svg>
+                                    <img src="assets/golf-svgrepo-com.svg">
                                     PAR: 72
                                 </li>
                                 <li class="place-summary__item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px" fill="#1f1f1f">
-                                        <path
-                                            d="M200-160v-340q0-142 99-241t241-99q142 0 241 99t99 241q0 142-99 241t-241 99H200Zm80-80h260q108 0 184-76t76-184q0-108-76-184t-184-76q-108 0-184 76t-76 184v260Zm359-161q41-41 41-99t-41-99q-41-41-99-41t-99 41q-41 41-41 99t41 99q41 41 99 41t99-41ZM480-500q0-25 17.5-42.5T540-560q25 0 42.5 17.5T600-500q0 25-17.5 42.5T540-440q-25 0-42.5-17.5T480-500ZM80-160v-200h80v200H80Z" />
-                                    </svg>
+                                    <img src="assets/measuring-tape-svgrepo-com.svg">
                                     TOTAL YARDS: 7305
                                 </li>
                                 <li class="place-summary__item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px" fill="#1f1f1f">
-                                        <path
-                                            d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z" />
-                                    </svg>
+                                    <img src="assets/people-group-svgrepo-com.svg">
                                     PUBLIC COURSE
                                 </li>
                             </ul>
@@ -160,9 +142,13 @@
                                                 class="property-card__image">
                                             <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
                                             <div class="property-card__actions">
-                                                <button class="action-btn" aria-label="Share">✈</button>
-                                                <button class="action-btn" aria-label="Location">📍</button>
-                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                                <button class="action-btn" aria-label="Share"><img
+                                                        src="assets/leaf.svg " alt="image of leaf"></button>
+                                                <button class="action-btn" aria-label="Location"><img
+                                                        src="assets/location-pin.svg"
+                                                        alt="image of location pin"></button>
+                                                <button class="action-btn" aria-label="Favorite"><img
+                                                        src="assets/love.svg" alt="image of fav icon"></button>
                                             </div>
                                         </div>
                                         <div class="property-card__body">
@@ -183,8 +169,8 @@
                                             </p>
                                             <div class="property-card__location">Florida › Orlando</div>
                                             <div class="property-card__buttons">
-                                                <button class="btn btn--outline">LEARN MORE</button>
-                                                <button class="btn btn--primary">SEE DATES</button>
+                                                <button class="recommand-btn btn--outline">LEARN MORE</button>
+                                                <button class="recommand-btn btn btn--primary">SEE DATES</button>
                                             </div>
                                         </div>
                                     </article>
@@ -196,9 +182,13 @@
                                                 class="property-card__image">
                                             <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
                                             <div class="property-card__actions">
-                                                <button class="action-btn" aria-label="Share">✈</button>
-                                                <button class="action-btn" aria-label="Location">📍</button>
-                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                                <button class="action-btn" aria-label="Share"><img
+                                                        src="assets/leaf.svg " alt="image of leaf"></button>
+                                                <button class="action-btn" aria-label="Location"><img
+                                                        src="assets/location-pin.svg"
+                                                        alt="image of location pin"></button>
+                                                <button class="action-btn" aria-label="Favorite"><img
+                                                        src="assets/love.svg" alt="image of fav icon"></button>
                                             </div>
                                         </div>
                                         <div class="property-card__body">
@@ -219,8 +209,8 @@
                                             </p>
                                             <div class="property-card__location">Florida › Orlando</div>
                                             <div class="property-card__buttons">
-                                                <button class="btn btn--outline">LEARN MORE</button>
-                                                <button class="btn btn--primary">SEE DATES</button>
+                                                <button class="recommand-btn btn--outline">LEARN MORE</button>
+                                                <button class="recommand-btn btn--primary">SEE DATES</button>
                                             </div>
                                         </div>
                                     </article>
@@ -232,9 +222,13 @@
                                                 class="property-card__image">
                                             <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
                                             <div class="property-card__actions">
-                                                <button class="action-btn" aria-label="Share">✈</button>
-                                                <button class="action-btn" aria-label="Location">📍</button>
-                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                                <button class="action-btn" aria-label="Share"><img
+                                                        src="assets/leaf.svg " alt="image of leaf"></button>
+                                                <button class="action-btn" aria-label="Location"><img
+                                                        src="assets/location-pin.svg"
+                                                        alt="image of location pin"></button>
+                                                <button class="action-btn" aria-label="Favorite"><img
+                                                        src="assets/love.svg" alt="image of fav icon"></button>
                                             </div>
                                         </div>
                                         <div class="property-card__body">
@@ -255,8 +249,8 @@
                                             </p>
                                             <div class="property-card__location">Florida › Orlando</div>
                                             <div class="property-card__buttons">
-                                                <button class="btn btn--outline">LEARN MORE</button>
-                                                <button class="btn btn--primary">SEE DATES</button>
+                                                <button class="recommand-btn btn--outline">LEARN MORE</button>
+                                                <button class="recommand-btn btn--primary">SEE DATES</button>
                                             </div>
                                         </div>
                                     </article>
@@ -267,9 +261,13 @@
                                                 class="property-card__image">
                                             <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
                                             <div class="property-card__actions">
-                                                <button class="action-btn" aria-label="Share">✈</button>
-                                                <button class="action-btn" aria-label="Location">📍</button>
-                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                                <button class="action-btn" aria-label="Share"><img
+                                                        src="assets/leaf.svg " alt="image of leaf"></button>
+                                                <button class="action-btn" aria-label="Location"><img
+                                                        src="assets/location-pin.svg"
+                                                        alt="image of location pin"></button>
+                                                <button class="action-btn" aria-label="Favorite"><img
+                                                        src="assets/love.svg" alt="image of fav icon"></button>
                                             </div>
                                         </div>
                                         <div class="property-card__body">
@@ -290,8 +288,8 @@
                                             </p>
                                             <div class="property-card__location">Florida › Orlando</div>
                                             <div class="property-card__buttons">
-                                                <button class="btn btn--outline">LEARN MORE</button>
-                                                <button class="btn btn--primary">SEE DATES</button>
+                                                <button class="recommand-btn btn--outline">LEARN MORE</button>
+                                                <button class="recommand-btn btn--primary">SEE DATES</button>
                                             </div>
                                         </div>
                                     </article>
@@ -303,9 +301,13 @@
                                                 class="property-card__image">
                                             <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
                                             <div class="property-card__actions">
-                                                <button class="action-btn" aria-label="Share">✈</button>
-                                                <button class="action-btn" aria-label="Location">📍</button>
-                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                                <button class="action-btn" aria-label="Share"><img
+                                                        src="assets/leaf.svg " alt="image of leaf"></button>
+                                                <button class="action-btn" aria-label="Location"><img
+                                                        src="assets/location-pin.svg"
+                                                        alt="image of location pin"></button>
+                                                <button class="action-btn" aria-label="Favorite"><img
+                                                        src="assets/love.svg" alt="image of fav icon"></button>
                                             </div>
                                         </div>
                                         <div class="property-card__body">
@@ -326,8 +328,8 @@
                                             </p>
                                             <div class="property-card__location">Florida › Orlando</div>
                                             <div class="property-card__buttons">
-                                                <button class="btn btn--outline">LEARN MORE</button>
-                                                <button class="btn btn--primary">SEE DATES</button>
+                                                <button class="recommand-btn btn--outline">LEARN MORE</button>
+                                                <button class="recommand-btn btn--primary">SEE DATES</button>
                                             </div>
                                         </div>
                                     </article>
@@ -339,9 +341,13 @@
                                                 class="property-card__image">
                                             <span class="property-card__badge">50+ GOLF COURSES NEARBY</span>
                                             <div class="property-card__actions">
-                                                <button class="action-btn" aria-label="Share">✈</button>
-                                                <button class="action-btn" aria-label="Location">📍</button>
-                                                <button class="action-btn" aria-label="Favorite">♡</button>
+                                                <button class="action-btn" aria-label="Share"><img
+                                                        src="assets/leaf.svg " alt="image of leaf"></button>
+                                                <button class="action-btn" aria-label="Location"><img
+                                                        src="assets/location-pin.svg"
+                                                        alt="image of location pin"></button>
+                                                <button class="action-btn" aria-label="Favorite"><img
+                                                        src="assets/love.svg" alt="image of fav icon"></button>
                                             </div>
                                         </div>
                                         <div class="property-card__body">
@@ -362,8 +368,8 @@
                                             </p>
                                             <div class="property-card__location">Florida › Orlando</div>
                                             <div class="property-card__buttons">
-                                                <button class="btn btn--outline">LEARN MORE</button>
-                                                <button class="btn btn--primary">SEE DATES</button>
+                                                <button class="recommand-btn btn--outline">LEARN MORE</button>
+                                                <button class="recommand-btn btn--primary">SEE DATES</button>
                                             </div>
                                         </div>
                                     </article>
@@ -414,13 +420,7 @@
                             <div class="highlights-grid">
                                 <article class="highlight-card">
                                     <div class="highlight-card__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M12 18v-7" />
-                                            <path d="M12 11l7-4-7-3v7z" />
-                                            <circle cx="12" cy="18" r="3" />
-                                        </svg>
+                                        <img src="assets/golf-svgrepo-com.svg">
                                     </div>
                                     <h3 class="highlight-card__title">Par and Difficulty</h3>
                                     <p class="highlight-card__text highlight-card__text--bold">Par 72 (Front 9: Par 36,
@@ -433,16 +433,7 @@
 
                                 <article class="highlight-card">
                                     <div class="highlight-card__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M2 12h20" />
-                                            <path d="M6 12v-3" />
-                                            <path d="M10 12v-2" />
-                                            <path d="M14 12v-3" />
-                                            <path d="M18 12v-2" />
-                                            <rect x="2" y="6" width="20" height="12" rx="2" />
-                                        </svg>
+                                        <img src="assets/measuring-tape-svgrepo-com.svg">
                                     </div>
                                     <h3 class="highlight-card__title">Yardage</h3>
                                     <p class="highlight-card__text highlight-card__text--bold">7,198 yards from the
@@ -459,14 +450,7 @@
                                 <article class="highlight-card">
                                     <div class="highlight-card__subgroup">
                                         <div class="highlight-card__icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                                                <path
-                                                    d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4.1a1 1 0 0 0-1.4 0l-2.1 2.1a1 1 0 0 0 0 1.3z" />
-                                                <path d="m11 12 3.5 3.5" />
-                                                <circle cx="7.5" cy="16.5" r="3.5" />
-                                            </svg>
+                                            <img src="assets/keys-svgrepo-com.svg">
                                         </div>
                                         <h3 class="highlight-card__title">Public Course</h3>
                                         <p class="highlight-card__text">No stay required</p>
@@ -474,14 +458,7 @@
                                     <div class="highlight-card__divider"></div>
                                     <div class="highlight-card__subgroup">
                                         <div class="highlight-card__icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                                                <path
-                                                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2" />
-                                                <circle cx="7" cy="17" r="2" />
-                                                <circle cx="17" cy="17" r="2" />
-                                            </svg>
+                                            <img src="assets/golf-cart-svgrepo-com.svg">
                                         </div>
                                         <h3 class="highlight-card__title">Cart Recommended</h3>
                                         <p class="highlight-card__text">Walking allowed</p>
@@ -490,17 +467,7 @@
 
                                 <article class="highlight-card">
                                     <div class="highlight-card__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M10 10v.01" />
-                                            <path d="M14 10v.01" />
-                                            <path d="M18 10v.01" />
-                                            <path d="M8.5 2h7l4 8H4.5z" />
-                                            <path d="M4.5 10c0 4.4 3.4 8 7.5 8s7.5-3.6 7.5-8" />
-                                            <path d="M12 18v4" />
-                                            <path d="M8 22h8" />
-                                        </svg>
+                                        <img src="assets/Course Style.svg">
                                     </div>
                                     <h3 class="highlight-card__title">Course Style</h3>
                                     <p class="highlight-card__text">Parkland</p>
@@ -517,15 +484,7 @@
                             <div class="amenities-grid">
                                 <div class="amenity-item">
                                     <div class="amenity-item__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="6" cy="12" r="2" />
-                                            <path d="M6 10V3" />
-                                            <path d="M18 14h-8a2 2 0 0 0-2 2v5" />
-                                            <path d="M18 14l-3-3" />
-                                            <path d="M18 14l-3 3" />
-                                        </svg>
+                                        <img src="assets/golf-championship.svg">
                                     </div>
                                     <div>
                                         <h4 class="amenity-item__title">18-Hole Championship Course</h4>
@@ -536,12 +495,7 @@
 
                                 <div class="amenity-item">
                                     <div class="amenity-item__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="9" />
-                                            <path d="M12 7v5l3 2" />
-                                        </svg>
+                                        <img src="assets/tee-time-flexibility.svg">
                                     </div>
                                     <div>
                                         <h4 class="amenity-item__title">Tee Time Flexibility</h4>
@@ -552,14 +506,7 @@
 
                                 <div class="amenity-item">
                                     <div class="amenity-item__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                            <circle cx="9" cy="7" r="4" />
-                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                        </svg>
+                                        <img src="assets/architect-with-helmet-svgrepo-com.svg">
                                     </div>
                                     <div>
                                         <h4 class="amenity-item__title">Architect and History</h4>
@@ -570,13 +517,7 @@
 
                                 <div class="amenity-item">
                                     <div class="amenity-item__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                                            <path d="M3 9h18" />
-                                            <path d="M9 21V9" />
-                                        </svg>
+                                        <img src="assets/clubhouse.svg">
                                     </div>
                                     <div>
                                         <h4 class="amenity-item__title">Luxury Clubhouse</h4>
@@ -587,14 +528,7 @@
 
                                 <div class="amenity-item">
                                     <div class="amenity-item__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M2 3h20" />
-                                            <path d="M6 3v18" />
-                                            <path d="M18 3v18" />
-                                            <path d="M6 12h12" />
-                                        </svg>
+                                        <img src="assets/Golf Lessons.svg">
                                     </div>
                                     <div>
                                         <h4 class="amenity-item__title">Golf Lessons Available</h4>
@@ -604,13 +538,7 @@
 
                                 <div class="amenity-item">
                                     <div class="amenity-item__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                                            <path d="M3 6h18" />
-                                            <path d="M16 10a4 4 0 0 1-8 0" />
-                                        </svg>
+                                        <img src="assets/shop-bag-svgrepo-com.svg">
                                     </div>
                                     <div>
                                         <h4 class="amenity-item__title">Pro Shop</h4>
@@ -642,7 +570,7 @@
                                     competitive play.
                                 </div>
                                 <div class="review-card__user">
-                                    <image src="" alt="User Image" />
+                                    <image src="assets/person-circle-fill-svgrepo-com.svg" alt="User Image" />
                                     <span class="review-card__username">Golf Pro Jhon Smith</span>
                                 </div>
                             </article>
@@ -657,7 +585,7 @@
                                     competitive play.
                                 </div>
                                 <div class="review-card__user">
-                                    <image src="" alt="User Image" />
+                                    <image src="assets/person-circle-fill-svgrepo-com.svg" alt="User Image" />
                                     <span class="review-card__username">Golf Pro Jhon Smith</span>
                                 </div>
                             </article>
@@ -672,7 +600,7 @@
                                     competitive play.
                                 </div>
                                 <div class="review-card__user">
-                                    <image src="" alt="User Image" />
+                                    <image src="assets/person-circle-fill-svgrepo-com.svg" alt="User Image" />
                                     <span class="review-card__username">Golf Pro Jhon Smith</span>
                                 </div>
                             </article>
@@ -830,6 +758,130 @@
                             </div>
                             <div></div>
                         </article>
+                    </section>
+                    <!-- Golf Course recommendation Section -->
+                    <section class="recommendations-section">
+                        <h2 class="section-title">Other Golf Courses Near Eagle Creek Golf Club</h2>
+
+                        <div class="courses-grid">
+                            <article class="course-card">
+                                <div class="card-image-wrapper">
+                                    <img src="assets/Providence Golf Club.jpg" alt="Providence Golf Club"
+                                        class="card-image">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="course-name">Providence Golf Club</h3>
+
+                                    <div class="course-distance">
+                                        <span class="icon"><img src="assets/location-pin-alt-svgrepo-com.svg"></span>
+                                        <span>6 MILES</span>
+                                    </div>
+
+                                    <div class="course-specs">
+                                        <div class="spec-item">
+                                            <span class="icon"><img src="assets/measuring-tape-svgrepo-com.svg"></span>
+                                            <span>YARDS: 7305</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="icon"><img src="assets/golf-svgrepo-com.svg"></span>
+                                            <span>PAR: 72</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-note">
+                                        <span class="note-icon"><img src="assets/golf-ball-club-svgrepo-com.svg"></span>
+                                        <p>Phil Mickelson: Notable wins in the AT&T Pebble Beach Pro-Am.</p>
+                                    </div>
+
+                                    <div class="card-actions">
+                                        <button class="btn btn-outline">STAY NEARBY</button>
+                                        <button class="btn btn-primary">MORE INFO</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="course-card">
+                                <div class="card-image-wrapper">
+                                    <img src="assets/ChampionsGate Golf Club.jpg" alt="ChampionsGate Golf Club"
+                                        class="card-image">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="course-name">ChampionsGate Golf Club</h3>
+
+                                    <div class="course-distance">
+                                        <span class="icon"><img src="assets/location-pin-alt-svgrepo-com.svg"></span>
+                                        <span>6 MILES</span>
+                                    </div>
+
+                                    <div class="course-specs">
+                                        <div class="spec-item">
+                                            <span class="icon"><img src="assets/measuring-tape-svgrepo-com.svg"></span>
+                                            <span>YARDS: 7305</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="icon"><img src="assets/golf-svgrepo-com.svg"></span>
+                                            <span>PAR: 72</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-note">
+                                        <span class="note-icon"><img src="assets/golf-ball-club-svgrepo-com.svg"></span>
+                                        <p>Phil Mickelson: Notable wins in the AT&T Pebble Beach Pro-Am.</p>
+                                    </div>
+
+                                    <div class="card-actions">
+                                        <button class="btn btn-outline">STAY NEARBY</button>
+                                        <button class="btn btn-primary">MORE INFO</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="course-card">
+                                <div class="card-image-wrapper">
+                                    <img src="assets/Nicklaus Course At Reunion Resort.jpg"
+                                        alt="Nicklaus Course At Reunion Resort" class="card-image">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="course-name">Nicklaus Course At Reunion Resort</h3>
+
+                                    <div class="course-distance">
+                                        <span class="icon"><img src="assets/location-pin-alt-svgrepo-com.svg"></span>
+                                        <span>6 MILES</span>
+                                    </div>
+
+                                    <div class="course-specs">
+                                        <div class="spec-item">
+                                            <span class="icon"><img src="assets/measuring-tape-svgrepo-com.svg"></span>
+                                            <span>YARDS: 7305</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="icon"><img src="assets/golf-svgrepo-com.svg"></span>
+                                            <span>PAR: 72</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-note">
+                                        <span class="note-icon"><img src="assets/golf-ball-club-svgrepo-com.svg"></span>
+                                        <p>Phil Mickelson: Notable wins in the AT&T Pebble Beach Pro-Am.</p>
+                                    </div>
+
+                                    <div class="card-actions">
+                                        <button class="btn btn-outline">STAY NEARBY</button>
+                                        <button class="btn btn-primary">MORE INFO</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-controls">
+                            <button class="btn btn-explore">EXPLORE MORE COURSES</button>
+                            <div class="arrow-buttons">
+                                <button class="btn-arrow" aria-label="Previous"><img src="assets/left arrow.svg"
+                                        alt="Previous"></button>
+                                <button class="btn-arrow" aria-label="Next"><img src="assets/right arrow.svg"
+                                        alt="Previous"></button>
+                            </div>
+                        </div>
                     </section>
 
                 </div>
