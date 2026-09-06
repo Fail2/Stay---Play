@@ -164,6 +164,7 @@ ul {
     /* max-width: 1440px; */
     margin: 0 20px;
     padding: 1px;
+    position: relative;
 }
 
 .course-detail__title {
@@ -240,6 +241,7 @@ ul {
     grid-template-columns: 3fr 1fr;
     gap: 1rem;
     margin-top: 1rem;
+    align-items: start;
 }
 
 /* Gallery Grid */
@@ -1153,6 +1155,9 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    position: sticky;
+    top: 90px;
+    right: 20px;
 }
 
 .availability-card {
