@@ -129,7 +129,7 @@ ul {
     font-weight: 500;
 }
 
-.nav__search {
+.nav__search-form {
     display: flex;
     align-items: center;
     border: 2px solid var(--color-accent);
@@ -139,7 +139,7 @@ ul {
     height: 40px;
 }
 
-.nav__search input {
+.nav__search-form input {
     border: none;
     background: transparent;
     color: #ffffff;
@@ -148,15 +148,15 @@ ul {
     font-family: inherit;
 }
 
-.nav__search input::placeholder {
+.nav__search-form input::placeholder {
     color: var(--color-accent);
 }
 
-.nav__search input:focus {
+.nav__search-form input:focus {
     outline: none;
 }
 
-.nav__search-btn {
+.nav__search-form-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -165,9 +165,13 @@ ul {
     align-items: center;
 }
 
-.nav__search-btn svg {
+.nav__search-form-btn svg {
     width: 1.125rem;
     height: 1.125rem;
+}
+
+.nav__icons-phone {
+    display: none;
 }
 
 .nav__hamburger {
@@ -227,7 +231,7 @@ ul {
     align-items: center;
     gap: 0.75rem;
     font-size: 0.75rem;
-    color: var(--color-text-muted);
+    color: var(--color-text-main, #999);
     margin-top: 0.5rem;
 }
 
@@ -263,7 +267,7 @@ ul {
 .place-gallery {
     display: flex;
     gap: 4px;
-    height: 450px;
+    height: auto;
 }
 
 .place-gallery__main {
@@ -351,15 +355,23 @@ ul {
     padding: 1rem 1.25rem;
 }
 
+.place-summary-container {
+    display: flex;
+    gap: 90px;
+}
+
 .place-summary__title {
     font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: 0.05em;
+    width: auto;
+    margin: 0;
 }
 
 .place-summary__list {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .place-summary__item {
@@ -429,6 +441,17 @@ ul {
     display: grid;
     grid-template-columns: 1fr 380px;
     gap: 20px;
+}
+
+.stays-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stays-dots,
+.reviews-dots {
+    display: block;
 }
 
 .property-grid {
@@ -693,6 +716,11 @@ ul {
     margin-top: 32px;
 }
 
+.highlights-section img {
+    width: 30px;
+    height: 30px;
+}
+
 .highlights-container {
     background-color: var(--color-bg-light);
     border-radius: 16px;
@@ -768,7 +796,7 @@ ul {
 
 .amenities-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 24px 20px;
     padding-top: 12px;
 }
@@ -929,8 +957,10 @@ h4 {
     justify-content: center;
     border-radius: var(--radius-md) var(--radius-md) 0 0;
     color: white;
-    height: 92px;
+    height: auto;
     gap: 32px;
+    flex-wrap: wrap;
+    padding: 32px;
 }
 
 .best-time-to-play__vertical_bar {
@@ -942,7 +972,7 @@ h4 {
 .best-time-to-play__days {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 32px;
 }
 
 .best-time-to-play__day {
@@ -1174,6 +1204,11 @@ h4 {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px var(--color-text-muted);
+}
+
+.btn-arrow img {
+    height: 30px;
+    width: 30px;
 }
 
 .btn-arrow:first-child {
@@ -1525,8 +1560,13 @@ h4 {
     }
 
     .course-detail__grid {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
+    }
+
+    .place-gallery__main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
     .place-gallery__main img {
@@ -1538,8 +1578,8 @@ h4 {
 
     .place-gallery-slider__dots {
         display: flex;
-        position: relative;
-        left: 50%;
+        position: absolute;
+        left: 43%;
         bottom: 5%;
         gap: 4px;
     }
@@ -1549,6 +1589,10 @@ h4 {
         height: 10px;
         border-radius: 50%;
         border: 1px solid white;
+    }
+
+    .place-gallery .active {
+        background-color: white;
     }
 
     .place-gallery__thumbs {
@@ -1624,6 +1668,7 @@ h4 {
         font-weight: 700;
         color: #475569;
         text-transform: uppercase;
+        width: 100px;
     }
 
     .pricing-card__divider {
@@ -1689,6 +1734,15 @@ h4 {
         margin-bottom: 32px;
     }
 
+    .special-packages {
+        margin-top: 20px;
+        font-size: 0.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .recommendations-section {
         display: none;
     }
@@ -1702,12 +1756,179 @@ h4 {
         flex-direction: column;
     }
 
-
 }
 
-/* Responsive adjustments for tablet / mobile */
-@media (max-width: 768px) {
+/* ------------Responsive Design for Phone View ------------ */
+@media (max-width: 576px) {
+
+    .nav__menu-button,
+    .nav__search-form,
+    .recommendations-section,
+    .map-container,
+    .place-meta__divider,
+    .pricing-card__divider,
+    .pricing-card__stat-item:not(:first-child),
+    .place-gallery__thumbs,
+    .stays-filter-btn:nth-child(n+3),
+    .property-card:not(:first-child),
+    .pagination,
+    .review-card:not(:first-child),
+    .best-time-to-play-weather__grid_card:not(:first-child) {
+        display: none;
+    }
+
+    .nav__icons-phone {
+        display: flex;
+        width: 150px;
+        justify-content: space-between;
+    }
+
+    .nav__hamburger,
+    .nav__icons-phone img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .place-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: start;
+        font-size: small;
+    }
+
+    .place-gallery {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .place-gallery__main {
+        width: 100%;
+        height: auto;
+    }
+
+    .place-gallery__main img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+
     .stay-play {
-        grid-template-columns: 1fr;
+        padding: 0;
+        border: none;
+    }
+
+    .pricing-card {
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .pricing-card__body {
+        border: none;
+        padding: 0;
+    }
+
+    .place-summary,
+    .place-summary-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .property-grid {
+        display: block;
+    }
+
+    .stays-dots,
+    .reviews-dots,
+    .weathers-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 16px 0;
+    }
+
+    .stays-dot,
+    .reviews-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid var(--color-text-muted);
+    }
+
+    .weathers-dot {
+        width: 28px;
+        height: 5px;
+        border-radius: var(--radius-md);
+        /* border: 1px solid var(--color-text-muted); */
+        background-color: var(--color-accent);
+    }
+
+    .stays-dot--active,
+    .reviews-dot--active,
+    .weathers-dot--active {
+        background-color: #10b981;
+        border: none;
+    }
+
+    .highlights-grid {
+        display: flex;
+
+        overflow-x: auto;
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-accent);
+    }
+
+    .highlights-grid::-webkit-scrollbar-thumb {
+        color: var(--color-accent);
+    }
+
+    .highlights-grid::-webkit-scrollbar {
+        height: 6px;
+        /* thickness, since this is a horizontal bar */
+    }
+
+    .highlights-grid::-webkit-scrollbar-track {
+        background: #e5e7eb;
+        border-radius: 10px;
+    }
+
+    .highlights-grid::-webkit-scrollbar-thumb {
+        background-color: #10b981;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        /* optional: shrinks the visible thumb inside the track */
+        background-clip: padding-box;
+    }
+
+    .highlights-grid::-webkit-scrollbar-thumb:hover {
+        background-color: #0ea371;
+    }
+
+    .highlight-card {
+        flex-shrink: 0;
+        max-width: 200px;
+    }
+
+    .reviews-section-grid,
+    .best-time-to-play-weather__grid {
+        display: block;
+    }
+
+    .best-time-to-play-weather__grid-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .best-time-to-play__season {
+        align-items: center;
     }
 }

@@ -3,16 +3,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Malay Chakma" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Malay Chakma">
     <title>Stay&Play Homepage</title>
+
+    <!-- 1. Google Fonts Preconnects & Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- 2. Local Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,9 +35,9 @@
                 </ul>
 
                 <button class="nav__menu-button">BOOK A TEA TIME</button>
-                <form class="nav__search" role="search">
+                <form class="nav__search-form" role="search">
                     <input type="search" placeholder="SEARCH" aria-label="Search site content">
-                    <button type="submit" aria-label="Submit search" class="nav__search-btn">
+                    <button type="submit" aria-label="Submit search" class="nav__search-form-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +45,12 @@
                         </svg>
                     </button>
                 </form>
-                <img class="nav__hamburger" src="assets/hamburger-menu.svg">
+                <div class="nav__icons-phone">
+                    <img class="nav__golf" src="assets/golf-phone.svg" alt="Image of Golf icon">
+                    <img class="nav__search" src="assets/search-phone.svg" alt="Image of Search icon">
+                    <img class="nav__hamburger" src="assets/hamburger-menu.svg">
+                </div>
+
             </div>
         </nav>
     </header>
@@ -60,9 +69,9 @@
                 </nav>
                 <h1 class="course-detail__title">Eagle Creek Golf Club, Stay and Play</h1>
                 <div class="place-meta">
-                    <div class="rating" aria-label="4.5 out of 5 stars">
+                    <div class="rating" aria-label="5 out of 5 stars">
                         <span class="rating__stars" aria-hidden="true">★★★★★</span>
-                        <span class="rating__score">4.5</span>
+                        <span class="rating__score">5</span>
                         <span class="rating__count">(128 reviews)</span>
                     </div>
                     <span class="place-meta__divider">|</span>
@@ -87,7 +96,6 @@
                             <!-- Carousel Dots -->
                             <div class="place-gallery-slider__dots">
                                 <span class="dot active"></span>
-                                <span class="dot"></span>
                                 <span class="dot"></span>
                                 <span class="dot"></span>
                                 <span class="dot"></span>
@@ -450,7 +458,14 @@
                                         </div>
                                     </article>
                                 </div>
-
+                                <div class="stays-dots">
+                                    <span class="stays-dot stays-dot--active"></span>
+                                    <span class="stays-dot"></span>
+                                    <span class="stays-dot"></span>
+                                    <span class="stays-dot"></span>
+                                    <span class="stays-dot"></span>
+                                    <span class="stays-dot"></span>
+                                </div>
                                 <div class="stays-footer">
                                     <div class="pagination">
                                         <span class="pagination__link pagination__link--disabled">PREVIOUS</span>
@@ -681,6 +696,12 @@
                                 </div>
                             </article>
                         </div>
+                        <div class="reviews-dots">
+                            <span class="reviews-dot reviews-dot--active"></span>
+                            <span class="reviews-dot"></span>
+                            <span class="reviews-dot"></span>
+                            <span class="reviews-dot"></span>
+                        </div>
                     </section>
 
                     <!-- Place Features section -->
@@ -830,10 +851,17 @@
                                                 <p>Nighttime: 40°F to 55°F</p>
                                         </div>
                                     </div>
+                                    <div class="weathers-dots">
+                                        <span class="weathers-dot weathers-dot--active"></span>
+                                        <span class="weathers-dot"></span>
+                                        <span class="weathers-dot"></span>
+                                        <span class="weathers-dot"></span>
+                                    </div>
                                 </div>
                             </div>
-                            <div></div>
+
                         </article>
+
                     </section>
                     <!-- Golf Course recommendation Section -->
                     <section class="recommendations-section">
